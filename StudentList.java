@@ -11,8 +11,8 @@ public class StudentList {
 			BufferedReader s = new BufferedReader(
 					new InputStreamReader(
 							new FileInputStream("students.txt"))); 
-			String r = s.readLine();
-			String i[] = r.split(",");			
+			String read = s.readLine();//change r to read
+			String i[] = read.split(",");//change r to read			
 			for(String j : i) { System.out.println(j); }
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");
@@ -26,8 +26,8 @@ public class StudentList {
 							new FileInputStream("students.txt"))); 
 			String r = s.readLine();
 			String i[] = r.split(",");	
-			Random x = new Random();
-				int y = x.nextInt(); 
+			Random rand = new Random();//change r to rand
+				int y = rand.nextInt(); //change r to rand
 					System.out.println(i[y]);
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");			
