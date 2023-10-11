@@ -25,9 +25,10 @@ public class StudentList {
 					new InputStreamReader(
 							new FileInputStream("students.txt"))); 
 			String r = s.readLine();
+//			System.out.println(r); //should be commented
 			String i[] = r.split(",");	
 			Random x = new Random();
-				int y = x.nextInt(); 
+				int y = x.nextInt(4);  //must include bound: 5
 					System.out.println(i[y]);
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");			
@@ -86,7 +87,7 @@ public class StudentList {
 					else { in_word=false;}			
 				}
 			}
-			System.out.println(count +" word(s) found " + a.length );
+			System.out.println(count +" word(s) found " );  //should be delete a.length
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");				
 		}
