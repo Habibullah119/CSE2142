@@ -17,6 +17,7 @@ public class StudentList {
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");
 		}
+		//here the rendom number is not working that's why i am include somthing
 		else if(args[0].equals("r")) 
 		{
 			System.out.println("Loading data ...");			
@@ -27,7 +28,7 @@ public class StudentList {
 			String r = s.readLine();
 			String i[] = r.split(",");	
 			Random x = new Random();
-				int y = x.nextInt(); 
+				int y = x.nextInt(4); //include 4 becouse our maximun student is 4
 					System.out.println(i[y]);
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");			
@@ -86,7 +87,7 @@ public class StudentList {
 					else { in_word=false;}			
 				}
 			}
-			System.out.println(count +" word(s) found " + a.length );
+			System.out.println(count +" word(s) found " );//hero the length value is not worke so that the item is deleted.
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");				
 		}
