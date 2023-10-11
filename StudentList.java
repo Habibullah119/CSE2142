@@ -1,11 +1,14 @@
 import java.io.*;
 import java.text.*;
 import java.util.*;
-public class StudentList {
-	public static void main(String[] args) {
+public class StudentList 
+{
+	public static void main(String[] args) 
+	{
 
 //		Check arguments
-		if(args[0].equals("a")) {
+		if(args[0].equals("a")) 
+		{
 			System.out.println("Loading data ...");			
 			try {
 			BufferedReader s = new BufferedReader(
@@ -17,13 +20,15 @@ public class StudentList {
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");
 		}
+
 		else if(args[0].equals("r")) 
 		{
 			System.out.println("Loading data ...");			
-			try {
+			try 
+			{
 			BufferedReader s = new BufferedReader(
 					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
+						new FileInputStream("students.txt"))); 
 			String r = s.readLine();
 			String i[] = r.split(",");	
 			Random x = new Random();
@@ -32,6 +37,7 @@ public class StudentList {
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");			
 		}
+
 		else if(args[0].contains("+")){
 			System.out.println("Loading data ...");			
 			try {
@@ -44,10 +50,10 @@ public class StudentList {
 	        String fd= dateFormat.format(d);
 			s.write(", "+t+"\nList last updated on "+fd);
 			s.close();
-			} catch (Exception e){}
-							
+			} catch (Exception e){}			
 			System.out.println("Data Loaded.");	
 		}
+		
 		else if(args[0].contains("?")) 
 		{
 			System.out.println("Loading data ...");			
@@ -68,6 +74,7 @@ public class StudentList {
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");				
 		}
+
 		else if(args[0].contains("c")) 
 		{
 			System.out.println("Loading data ...");			
