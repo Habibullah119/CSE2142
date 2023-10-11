@@ -27,8 +27,8 @@ public class StudentList {
 			String r = s.readLine();
 			String i[] = r.split(",");	
 			Random x = new Random();
-				int y = x.nextInt(); 
-					System.out.println(i[y]);
+			//	int y = x.nextInt(); 
+					System.out.println(i[x.nextInt()]);// remove teporary variable
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");			
 		}
